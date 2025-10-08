@@ -1,0 +1,55 @@
+/* HEADER */
+header {
+    padding: 25px;
+    background-color: #cfd8dc;
+}
+
+header img {
+    height: 30px;
+    width: 30px;
+}
+
+section {
+    width: 80%;
+    float: left;
+    background-color: #ffffff;
+}
+
+footer p {
+    flex: 1;
+    margin: 0;
+}
+
+footer ul {
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+/* ENLACES DEL FOOTER */
+footer ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    display: flex;
+    padding: 10px 5px;
+    background-color: #45a1ff;
+    color: #fff;
+    position: absolute;
+    top: 700px;
+    width: 100%;
+    text-align: center;
+}
+
+.contenedor {
+    display: flex;
+}

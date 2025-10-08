@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ComidaADomicilio</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <main>
+        <section>
+            <h1> Comida a domicilio <br> Deja que te mimemos </h1>
+            <figure>
+                <img src="imagenes/crema.jpeg">
+                <h2> 1.Crema </h2>
+            </figure>
+            <figure>
+                <img src="imagenes/ensalada.jpeg">
+                <h2> 2.Ensalada </h2>
+            </figure>
+            <figure>
+                <img src="imagenes/legumbres.jpeg">
+                <h2> 3.Legumbres </h2>
+            </figure>
+            <figure>
+                <img src="imagenes/huevos.jpeg">
+                <h2> 4.Huevos </h2>
+            </figure>
+            <figure>
+                <img src="imagenes/postre.jpeg">
+                <h2> 5.Postre </h2>
+            </figure>
+            <figure class="caja-oculta">
+                <figcaption class="cuadro-azul" style="background-color: blue; color: white;">Los mejores ingredientes
+                    en tu mesa</figcaption>
+                <h2 style="color: white;"> No lo dudes </h2>
+            </figure>
+        </section>
+        <div class="linea-blanca">
+            <p>3 platos por <span style="color: blue;">SOLO</span> 15€</p>
+        </div>
+        <form action="/ComidaDomicilio/formulario.php" method="post">
+            <div class="caja-form">
+                <div class="caja-1-form" style="font-size: larger;">
+                    <label for="platos" style="background-color: blue; color: white;">
+                        Plato 1: <input type="checkbox" name="plato1" value="crema">
+                        Plato 2: <input type="checkbox" name="plato2" value="ensalada">
+                        Plato 3: <input type="checkbox" name="plato3" value="legumbres">
+                        Plato 4: <input type="checkbox" name="plato4" value="huevos">
+                        Plato 5: <input type="checkbox" name="plato5" value="postre">
+                    </label>
+                    <label> <input type="checkbox" name="privacidad" value="1" required> Acepto las políticas de <span class="azul">privacidad</span>
+                    </label>
+                    <label> <input type="checkbox" name="promociones" value="1"> Deseo recibir promociones por @ </label>
+                    <input type="submit" value="Enviar ahora" size="50" style="background-color: blue; color: white;" class="boton-enviar">
+                </div>
+                <div class="caja-2-form">
+                    <label style="font-size: larger;">
+                        Hora de entrega <br>
+                        <input type="radio" name="entrega" value="13.30"> De 13:30 a 14:00
+                        <input type="radio" name="entrega" value="14.30"> De 14:00 a 14:30
+                    </label>
+                    <label>
+                        Forma de pago <br>
+                        <input type="radio" name="pago" value="efectivo"> Efectivo
+                        <input type="radio" name="pago" value="tarjeta"> Tarjeta
+                     <br></label>
+                    <input type="text" name="direccion" size="70" placeholder="Direccion*" class="direccion-input">
+                    <label>
+                        <input type="text" name="email" size="37" placeholder="Email" required>
+                        <input type="text" name="telefono" size="30" placeholder="Telefono*" max="9">
+                    </label>
+                    <label style="color: blue; font-size: larger;">
+                        <br>Tus deseos nos interesan <br> ¿Qué te gustaría que te preparáramos para comer? <br>
+                        <textarea type="text" name="mensaje" rows="4" cols="70" " placeholder="mensaje"> </textarea>
+                    </label>
+                </div>
+            </div>
+        </form>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,132 @@
+body {
+    padding: 100px;
+    background-color: cornflowerblue;
+}
+
+main {
+    background-color: greenyellow;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+    flex-wrap: wrap;
+
+    h1 {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+figure {
+    width: 12%;
+
+    img {
+        height: 100px;
+        /* Altura fija */
+        width: 200px;
+        object-fit: cover;
+        /* Esto recorta y centra la imagen si tiene proporciones diferentes */
+    }
+}
+
+figure.caja-oculta {
+    display: none;
+}
+
+div.linea-blanca {
+    display: flex;
+    width: 100%;
+
+    background-color: white;
+    justify-content: center;
+    font-size: x-large;
+}
+
+.caja-form {
+    display: flex;
+    flex-direction: row;
+
+    width: 100%;
+}
+
+.caja-1-form {
+    display: flex;
+    flex-direction: column;
+
+    width: 50%;
+    margin-left: 100px;
+    margin-top: 100px;
+
+    .boton-enviar {
+        width: 30%;
+    }
+}
+
+.caja-2-form {
+    margin-left: 300px;
+    margin: 20px;
+    flex-direction: column;
+    width: 60%;
+}
+
+@media (max-width: 768px) {
+
+    figure.caja-oculta {
+        display: flex;
+    }
+
+    section {
+        display: flex;
+        flex-wrap: wrap;
+
+        justify-content: space-evenly;
+    }
+
+    figure {
+        display: flex;
+
+        width: 20%;
+
+        h1 {
+            width: 100%;
+        }
+
+        img {
+            width: 80px;
+            height: 80px;
+        }
+    }
+
+    .caja-form {
+        width: 85%;
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+        gap: 5px;
+    }
+
+    .caja-1-form {
+        display: flex;
+        flex-direction: column;
+
+        width: 100%;
+    }
+
+    .caja-2-form {
+        display: flex;
+        width: 50%;
+
+        align-items: center;
+
+        margin-left: 120px;
+    }
+
+    .direccion-input {
+        width: 120%;
+    }
+}
