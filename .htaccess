@@ -1,0 +1,8 @@
+# Bloquear listado de directorios
+Options -Indexes
+
+# Proteger .git
+<DirectoryMatch "\.git">
+    Order allow,deny
+    Deny from all
+</DirectoryMatch>
