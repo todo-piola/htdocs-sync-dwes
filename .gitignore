@@ -1,0 +1,12 @@
+# No sincronizar bases de datos de phpMyAdmin
+phpmyadmin/
+
+# No sincronizar archivos temporales
+*.tmp
+*.log
+.DS_Store
+Thumbs.db
+
+# No sincronizar carpetas de caché
+cache/
+tmp/
