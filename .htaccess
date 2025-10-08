@@ -1,6 +1,2 @@
 # Bloquear listado de directorios
 Options -Indexes
-
-<DirectoryMatch "\.git">
-    Require all denied
-</DirectoryMatch>
