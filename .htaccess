@@ -1,8 +1,16 @@
 # Bloquear listado de directorios
 Options -Indexes
 
-# Proteger .git
+# Proteger carpeta .git
 <DirectoryMatch "\.git">
-    Order allow,deny
-    Deny from all
+    Require all denied
 </DirectoryMatch>
+
+# Proteger archivos que empiezan con punto (.env, .gitignore, etc.)
+<FilesMatch "^\.">
+    Require all denied
+</FilesMatch>
+
+# Configuración de errores personalizados (opcional)
+# ErrorDocument 404 /error404.php
+# ErrorDocument 403 /error403.php
