@@ -52,3 +52,5 @@ $person1->setNickname('Silence');
 $person1->setNickname('Sileence');
 
 exit($person1->getNickname());
+
+#TODO completar ejercicios Styde
