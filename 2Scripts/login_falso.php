@@ -1,8 +1,8 @@
 <?php
-/*si va bien redirige a bienvenido.html
+/*si va bien y en el form se introduce "usuario" y "1234" redirige a bienvenido.html
 si va mal, mensaje de error */
 if ($_POST['usuario']=="usuario" and $_POST["clave"]=="1234"){
-header("Location:bienvenido.html");
+    header("Location:bienvenido.html");
 } else {
-header("Location:error.html");
+    header("Location:error.html");
 }

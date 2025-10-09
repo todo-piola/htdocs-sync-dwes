@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // (en un caso real, se comprobarían contra una base de datos)
     if ($usuario == "usuario" && $clave == "1234") {
         // Si las credenciales son correctas, redirigimos al usuario a principal.php
-        header("Location: principal.php");
+        header("Location: 02-principal_form_en_uno.php");
         exit(); // Muy importante: detener el script tras redirigir
     } else {
         // Si no coinciden, activamos una variable que indicará que hubo un error
