@@ -15,9 +15,8 @@
     // Activar el manejador personalizado
     set_error_handler("manejadorErrores");
 
-    // Provocar un error (variable no definida)
-    $a = $b; // $b no está inicializada, debería disparar un NOTICE
-
+    // Provocar un error (variable no definida),$b no está inicializada lanzará un ERROR NOTICE
+    $a = $b;
     ?>
 </body>
 </html>
