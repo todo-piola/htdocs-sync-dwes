@@ -1,6 +1,6 @@
 <?php
 // Conexión a la base de datos
-$link = mysqli_connect("localhost", "root", "") or die('No se pudo conectar: ' . mysqli_error($link));
+$link = mysqli_connect("localhost", "root", "") or die('No se pudo conectar: ') . mysqli_error($link);
 $db = mysqli_select_db($link, "domicilio") or die('No se pudo seleccionar la base de datos');
 
 // Volcamos las variables directamente como en clase
