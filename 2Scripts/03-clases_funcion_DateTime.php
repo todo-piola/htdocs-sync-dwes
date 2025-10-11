@@ -5,7 +5,7 @@ class Person {
     protected $lastName;
     protected $nickname;
     protected $fechaNacimiento;
-    protected $changedNickname = 0;
+    protected $nicknameCambiado = 0;
 
     public function __construct($firstName, $lastName, $fechaNacimiento) {
         $this->firstName = $firstName;
@@ -23,19 +23,15 @@ class Person {
 
     // Agrega validación adicional para que el usuario sólo pueda agregar nicknames que tengan al menos 2 caracteres y no sean igual a su nombre o apellido.
     public function setNickname($nickname) {
-        if ($this->changedNickname >= 2) {
-            throw new Exception("You can't change a nickname more than 2 times");
+        if ($this->nicknameCambiado >= 2) {
+            throw new Exception("No puedes cambiar el nickname más de dos veces");
         }
 
-        if (
-            strlen($nickname) >= 2
-            && $nickname !== $this->firstName
-            && $nickname !== $this->lastName
-        ) {
-            $this->changedNickname++;
+        if (strlen($nickname) >= 2 && $nickname !== $this->firstName && $nickname !== $this->lastName) {
+            $this->nicknameCambiado++;
             $this->nickname = $nickname;
         } else {
-            throw new Exception("Invalid nickname: too short or same as name/lastname");
+            throw new Exception("Nickname inválido: demasiado corto o igual al nombre o apellido");
         }
     }
 
@@ -74,7 +70,7 @@ class Person {
     }
 }
 
-$person1 = new Person('Duilio', 'Palacios', "1995-06-20");
+$person1 = new Person('Franco', 'Benavides', "1995-06-20");
 $person1->calcularEdad();
 
 $person1->setNickname('Silence');
