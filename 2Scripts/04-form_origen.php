@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Formulario - Origen</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css" />
 </head>
 <body>
     <h1>Formulario simple</h1>
