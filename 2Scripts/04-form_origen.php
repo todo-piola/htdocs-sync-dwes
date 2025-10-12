@@ -8,7 +8,7 @@
 <body>
     <h1>Formulario simple</h1>
 
-    <form action="fichero_destino.php" method="post">
+    <form action="04-fichero_destino.php" method="post">
         <label>Nombre:</label>
         <input type="text" name="nombre" required><br><br>
 

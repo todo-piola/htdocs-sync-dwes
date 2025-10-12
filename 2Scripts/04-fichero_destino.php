@@ -13,7 +13,7 @@
     $telefono = $_POST['telefono'] ?? '';
 
     // Guardar los datos en un fichero de texto
-    $fichero = "datos.txt";
+    $fichero = $nombre . ".txt";
     $contenido = "Nombre: $nombre - Teléfono: $telefono\n";
 
     // Escribir (añadir al final del fichero)
