@@ -27,7 +27,7 @@ class Person {
             throw new Exception("No puedes cambiar el nickname más de dos veces");
         }
 
-        if (strlen($nickname) >= 2 && $nickname !== $this->firstName && $nickname !== $this->lastName) {
+        if (strlen($nickname) >= 2 && $nickname != $this->firstName && $nickname !== $this->lastName) {
             $this->nicknameCambiado++;
             $this->nickname = $nickname;
         } else {

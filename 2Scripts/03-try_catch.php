@@ -17,7 +17,7 @@
     try{
         $resultado = dividir(5, 0);
         echo "Resul 1 $resultado<br>";
-    }catch(Exception $e) {
+    } catch(Exception $e) {
         echo "Excepción: " . $e->getMessage() . "<br>";
     }finally{
         echo "Primer finally";
@@ -25,10 +25,10 @@
 
     try{
         $resul2 = dividir(5, 2);
-        echo "Resul 2 $resul2<br>";
-    }catch(Exception $e){
+        echo "Resul 2 $resul2 <br>";
+    } catch(Exception $e){
         echo "Excepción: " . $e->getMessage() . "<br>";
-    }finally{
+    } finally {
         echo "Segundo finally";
     }
 ?>
