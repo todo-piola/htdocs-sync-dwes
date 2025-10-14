@@ -10,7 +10,6 @@
         $nom1 = "Franco";
         $nom2 = "Pepe";
         echo "La longitud del nombre $nom1 es de " . strlen($nom1) . " caracteres<br>";
-
         $array = explode("n", $nom1);
         foreach($array as $valor) {
             echo $valor . " ";
