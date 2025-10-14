@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Benavides2DAW</title>
+        <link rel="stylesheet" href="estilo.css">
+	</head>
+	<body>
+        <h1>FORMULARIO MANEJO FICHEROS</h1>
+		<form method="POST" action="fichero_destino.php" enctype="multipart/form-data">
+			<label for="nombre">Nombre completo:</label>
+			<input type="text" id="nombre" name="nombre" required />
+
+			<label for="email">Correo electrónico:</label>
+			<input type="email" id="email" name="email" required />
+
+			<label for="password">Contraseña:</label>
+			<input
+				type="password"
+				id="password"
+				name="password"
+				minlength="6"
+				required
+			/>
+
+			<label for="fecha_nacimiento">Fecha de nacimiento:</label>
+			<input type="date" id="fecha_nacimiento" name="fecha_nacimiento" />
+
+			<label for="genero">Género:</label>
+			<nav class="radio-group">
+				<label
+					><input type="radio" name="genero" value="masculino" />
+					Masculino</label
+				>
+				<label
+					><input type="radio" name="genero" value="femenino" />
+					Femenino</label
+				>
+				<label
+					><input type="radio" name="genero" value="otro" />
+					Otro</label
+				>
+			</nav>
+
+			<label for="pais">País:</label>
+			<select id="pais" name="pais" required>
+				<option value="">Selecciona tu país</option>
+				<option value="ar">Argentina</option>
+				<option value="co">Colombia</option>
+				<option value="es">España</option>
+				<option value="fr">Francia</option>
+				<option value="en">Inglaterra</option>
+			</select>
+
+			<label for="bio">Biografía:</label>
+			<textarea
+				id="bio"
+				name="bio"
+				rows="4"
+				placeholder="Cuéntanos algo sobre ti..."
+			></textarea>
+
+			<button type="submit">Enviar</button>
+		</form>
+	</body>
+</html>
