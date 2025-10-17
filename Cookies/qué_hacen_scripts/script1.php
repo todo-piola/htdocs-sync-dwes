@@ -3,7 +3,7 @@ if( isset( $_COOKIE['lang'])) {
 //Actualizar cookie
     /* Si la cookie llamada 'lang' existe:
     1. Le aumentamos el tiempo de duración una hora a la cookie
-    2. La guardamos en el directorio raiz */
+    2. Con el cuarto parámetro conseguimos que sea accesible desde cualquier ruta */
     setcookie("lang", $_COOKIE['lang'], time() + (6000), "/");
 }
 else {
