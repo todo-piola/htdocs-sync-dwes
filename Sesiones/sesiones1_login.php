@@ -46,6 +46,7 @@ if (isset($err) && $err == true) {
     echo "<p>Revise usuario y contraseña</p>";
 }
 ?>
+
 <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
     Usuario:
     <input value="<?php if (isset($usuario)) echo $usuario; ?>" id="usuario" name="usuario" type="text"><br>
