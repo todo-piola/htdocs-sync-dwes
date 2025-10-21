@@ -10,6 +10,7 @@ $_SESSION['aficiones'] = ["leer", "futbol"];
 $_SESSION['inicio'] = time();
 ?>
 
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
