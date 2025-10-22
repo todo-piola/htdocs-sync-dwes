@@ -1,0 +1,46 @@
+body {
+    width: 99%;
+}
+
+#encabezado{
+    display: flex;
+    width: 100%;
+}
+
+#logo{
+    width: 40%;
+}
+
+.logo_aedo{
+    height: 150px;
+    width: 150px;
+}
+
+#navegacion {
+    display: flex;
+    width: 100%;
+}
+
+#titulo {
+    display: flex;
+    width: 100%;
+    justify-content:space-around;
+    align-items: center;
+}
+
+section {
+    display: flex;
+    width: 100%;
+}
+
+div#peliculas {
+    width: 32%;
+}
+
+.peli_img {
+    height: 300px;
+    /* Altura fija */
+    width: 300px;
+    object-fit: cover;
+    /* Esto recorta y centra la imagen si tiene proporciones diferentes */
+}
