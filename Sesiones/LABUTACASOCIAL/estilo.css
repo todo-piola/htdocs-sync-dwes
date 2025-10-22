@@ -7,13 +7,20 @@ body {
     width: 100%;
 }
 
-#logo{
+#mitad_encabezado{
     width: 40%;
 }
 
-.logo_aedo{
-    height: 150px;
-    width: 150px;
+#logo {
+    /* Imágenes responsivas: ocupan el ancho del contenedor y mantienen la proporción */
+    width: 40%;
+    height: auto;
+    display: block; /* elimina espacios en línea si la imagen está en línea */
+    /* object-fit solo tiene efecto si se fija la altura o se usa aspect-ratio;
+       dejarlo por si quieres combinar con .peli_img--square más abajo */
+    object-fit: cover;
+    /* Si prefieres limitar el tamaño máximo de la imagen, usa max-width:
+       max-width: 300px; */
 }
 
 #navegacion {
@@ -38,9 +45,14 @@ div#peliculas {
 }
 
 .peli_img {
-    height: 300px;
-    /* Altura fija */
-    width: 300px;
+    /* Imágenes responsivas: ocupan el ancho del contenedor y mantienen la proporción */
+    width: 100%;
+    height: auto;
+    display: block; /* elimina espacios en línea si la imagen está en línea */
+    /* object-fit solo tiene efecto si se fija la altura o se usa aspect-ratio;
+       dejarlo por si quieres combinar con .peli_img--square más abajo */
     object-fit: cover;
-    /* Esto recorta y centra la imagen si tiene proporciones diferentes */
+    /* Si prefieres limitar el tamaño máximo de la imagen, usa max-width:
+       max-width: 300px; */
 }
+

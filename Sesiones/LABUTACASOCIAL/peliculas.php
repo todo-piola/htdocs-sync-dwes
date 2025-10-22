@@ -9,13 +9,31 @@
 </head>
 <body>
     <header id="encabezado">
-        <div id="logo">
-            <img src="imgs/labutacasocial.png" class="logo_aedo">
+        <div id="mitad_encabezado">
+            <img src="imgs/labutacasocial.png" id="logo">
         </div>
         <nav id="navegacion">
-            <h1 id="titulo">Bienvenid@ a Cines Hanns</h1>
+            <h1 id="titulo">Bienvenid@ al cine</h1>
         </nav>
     </header>
+    <main>
+    <form action="butacas.php" method="post">
+    <!-- Para que los botones de radio sean únicos, deben compartir el mismo name
+        mientras que value=""  es lo que se envía a través del servidor -->
+        <label for="peliculas">
+        1. Kimetsu No Yaiba 
+        <input type="radio" name="pelicula" value="kimetsu">
+        <br>
+        2. Chainsawman 
+        <input type="radio" name="pelicula" value="chainsawman">
+        <br>
+        3. Django 
+        <input type="radio" name="pelicula" value="django">
+        </label>
+        <br>
+        <input type="submit" value="Hora de elegir la Butaca">
+    </form>
+    </main>
     <section>
         <div id="peliculas">
             <h2> Película 1: Kimetsu </h2>
