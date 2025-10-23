@@ -10,7 +10,6 @@ if (isset($_COOKIE['contador'])) {
 } else {
     // Si no existe la cookie, la creamos con valor inicial 1 y duración de 1 año
     setcookie('contador', 1, time() + 365 * 24 * 60 * 60);
-
     $mensaje = 'Bienvenido a nuestra página web';
 }
 ?>
