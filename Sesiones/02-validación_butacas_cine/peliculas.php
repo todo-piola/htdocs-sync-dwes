@@ -48,5 +48,7 @@
             <img src="imgs/django_peli.jpg" class="peli_img">
         </div>
     </section>
+    <br><br>
+    <a href="reiniciar.php" style="color:red;"> Reiniciar sesión</a>
 </body>
 </html>
