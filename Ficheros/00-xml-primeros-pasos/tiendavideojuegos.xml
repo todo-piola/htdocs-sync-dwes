@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<tiendas
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:noNamespaceSchemaLocation="tiendavideojuegos.xsd">
+
+   <tienda id="9001">
+      <nombre>Pixel Games</nombre>
+      <direccion>
+         <calle>Avenida del Jugador 45</calle>
+         <ciudad>Madrid</ciudad>
+         <pais>España</pais>
+         <codigo_postal>28013</codigo_postal>
+      </direccion>
+      <direccion>
+         <calle>Calle Nivel 88</calle>
+         <ciudad>Barcelona</ciudad>
+         <pais>España</pais>
+         <codigo_postal>08002</codigo_postal>
+      </direccion>
+   </tienda>
+
+   <tienda id="9002">
+      <nombre>RetroZone</nombre>
+      <direccion>
+         <calle>Calle Cartucho 12</calle>
+         <ciudad>Valencia</ciudad>
+         <pais>España</pais>
+         <codigo_postal>46001</codigo_postal>
+      </direccion>
+      <direccion>
+         <calle>Plaza del Pixel 5</calle>
+         <ciudad>Sevilla</ciudad>
+         <pais>España</pais>
+         <codigo_postal>41001</codigo_postal>
+      </direccion>
+      <direccion>
+         <calle>Bulevar Puntuación Alta 100</calle>
+         <ciudad>Bilbao</ciudad>
+         <pais>España</pais>
+         <codigo_postal>48009</codigo_postal>
+      </direccion>
+   </tienda>
+</tiendas>
