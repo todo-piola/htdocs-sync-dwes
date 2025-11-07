@@ -1,0 +1,13 @@
+{
+    "name": "daw2/phputil",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Franco Benavides",
+            "email": "benavidesgarciafranco@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^11.5"
+    }
+}
