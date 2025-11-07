@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <phpunit bootstrap="vendor/autoload.php"
-colors="true"
-verbose="true">
-<testsuites>
-<testsuite name="PhpUtil Test Suite">
-<directory>tests</directory>
-</testsuite>
-</testsuites>
+         colors="true"
+         testdox="true">
+    <testsuites>
+        <testsuite name="Test Suite Principal">
+            <directory>tests</directory>
+        </testsuite>
+    </testsuites>
 </phpunit>

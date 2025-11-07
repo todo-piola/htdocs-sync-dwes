@@ -1,6 +1,11 @@
 {
     "name": "daw2/phputil",
     "type": "project",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
     "authors": [
         {
             "name": "Franco Benavides",
