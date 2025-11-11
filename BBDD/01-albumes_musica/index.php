@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>CRUD - Chinese Man</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+  <h1> Chinese Man - Gestión de Álbumes</h1>
+  <p>Selecciona una opción del menú:</p>
+
+  <form action="insertar.php" method="get">
+    <button type="submit">I - Insertar nuevo álbum</button>
+  </form>
+
+  <form action="actualiza.php" method="get">
+    <button type="submit">A - Actualizar álbum</button>
+  </form>
+
+  <form action="consulta.php" method="get">
+    <button type="submit">C - Consultar álbumes</button>
+  </form>
+
+  <form action="borra.php" method="get">
+    <button type="submit">B - Borrar álbum</button>
+  </form>
+
+</body>
+</html>
