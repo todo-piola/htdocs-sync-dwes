@@ -8,22 +8,11 @@
 <body>
   <h1> Chinese Man - Gestión de Álbumes</h1>
   <p>Selecciona una opción del menú:</p>
-
-  <form action="insertar.php" method="get">
-    <button type="submit">I - Insertar nuevo álbum</button>
-  </form>
-
-  <form action="actualiza.php" method="get">
-    <button type="submit">A - Actualizar álbum</button>
-  </form>
-
-  <form action="consulta.php" method="get">
-    <button type="submit">C - Consultar álbumes</button>
-  </form>
-
-  <form action="borra.php" method="get">
-    <button type="submit">B - Borrar álbum</button>
-  </form>
-
+    <div class="menu">
+        <form action="insertar.php" method="get"><button type="submit">I - Insertar</button></form>
+        <form action="actualiza.php" method="get"><button type="submit">A - Actualizar</button></form>
+        <form action="consulta.php" method="get"><button type="submit">C - Consultar</button></form>
+        <form action="borra.php" method="get"><button type="submit">B - Borrar</button></form>
+    </div>
 </body>
 </html>
