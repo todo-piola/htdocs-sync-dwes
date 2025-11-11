@@ -3,33 +3,35 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Consultar álbumes</title>
+    <meta charset="UTF-8">
+    <title>Consultar álbumes</title>
+    <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-  <h2>🔍 Consulta de álbumes de Chinese Man</h2>
+<h2>🔍 Lista de álbumes</h2>
 
-  <?php
-  $resultado = $conn->query("SELECT * FROM albumes ORDER BY anio ASC");
+<p><a href="index.php">⬅ Volver</a></p>
 
-  if ($resultado->num_rows > 0) {
-      echo "<table border='1' cellpadding='6'>";
-      echo "<tr><th>ID</th><th>Título</th><th>Año</th><th>Sello</th><th>País</th></tr>";
-      while ($fila = $resultado->fetch_assoc()) {
-          echo "<tr>";
-          echo "<td>{$fila['id']}</td>";
-          echo "<td>{$fila['titulo']}</td>";
-          echo "<td>{$fila['anio']}</td>";
-          echo "<td>{$fila['sello']}</td>";
-          echo "<td>{$fila['pais']}</td>";
-          echo "</tr>";
-      }
-      echo "</table>";
-  } else {
-      echo "<p>No hay álbumes registrados todavía.</p>";
-  }
-  ?>
+<?php
+$stmt = $conexion->query("SELECT * FROM albumes ORDER BY id DESC");
+$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-  <p><a href="index.php">⬅ Volver al menú</a></p>
+if ($rows) {
+    echo "<table border='1' cellpadding='6' style='margin:auto;'>
+            <tr><th>ID</th><th>Título</th><th>Año</th><th>Sello</th><th>País</th></tr>";
+    foreach ($rows as $r) {
+        echo "<tr>
+                <td>{$r['id']}</td>
+                <td>{$r['titulo']}</td>
+                <td>{$r['anio']}</td>
+                <td>{$r['sello']}</td>
+                <td>{$r['pais']}</td>
+              </tr>";
+    }
+    echo "</table>";
+} else {
+    echo "<p>No hay álbumes registrados.</p>";
+}
+?>
 </body>
 </html>
