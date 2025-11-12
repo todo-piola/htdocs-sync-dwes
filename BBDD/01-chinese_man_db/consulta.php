@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-<h2>🔍 Lista de álbumes</h2>
+<h2> Lista de álbumes</h2>
 
 <p><a href="index.php">⬅ Volver</a></p>
 

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-<h2>✏️ Actualizar álbum</h2>
+<h2> Actualizar álbum</h2>
 
 <form action="" method="post">
   ID (a actualizar):<br><input type="number" name="id" required><br><br>
