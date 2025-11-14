@@ -18,12 +18,18 @@
 <p><a href="index.php">⬅ Volver</a></p>
 
 <?php
-if (isset($_POST['borrar'])) {
+
+try{
+  if (isset($_POST['borrar'])) {
     $id = $_POST['id'];
     $sql = "DELETE FROM albumes WHERE id=$id";
     $conexion->exec($sql);
     echo "<p style='color:green;'>Álbum borrado ✅</p>";
+  }
+} catch (PDOException $e) {
+  die("Conexión fallida: " . $e->getMessage());
 }
+
 ?>
 </body>
 </html>

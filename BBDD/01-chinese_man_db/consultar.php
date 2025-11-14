@@ -13,24 +13,28 @@
 <p><a href="index.php">⬅ Volver</a></p>
 
 <?php
-$consulta = $conexion->query("SELECT * FROM albumes ORDER BY id DESC");
-$filas = $consulta->fetchAll(PDO::FETCH_ASSOC);
 
-if ($filas) {
-    echo "<table border='1' cellpadding='6' style='margin:auto;'>
-            <tr><th>ID</th><th>Título</th><th>Año</th><th>Sello</th><th>País</th></tr>";
-    foreach ($filas as $r) {
-        echo "<tr>
-                <td>{$r['id']}</td>
-                <td>{$r['titulo']}</td>
-                <td>{$r['anio']}</td>
-                <td>{$r['sello']}</td>
-                <td>{$r['pais']}</td>
-              </tr>";
+try{
+    $consulta = $conexion->query("SELECT * FROM albumes ORDER BY id DESC");
+    $filas = $consulta->fetchAll(PDO::FETCH_ASSOC);
+    if ($filas) {
+        echo "<table border='1' cellpadding='6' style='margin:auto;'>
+                <tr><th>ID</th><th>Título</th><th>Año</th><th>Sello</th><th>País</th></tr>";
+        foreach ($filas as $r) {
+            echo "<tr>
+                    <td>{$r['id']}</td>
+                    <td>{$r['titulo']}</td>
+                    <td>{$r['anio']}</td>
+                    <td>{$r['sello']}</td>
+                    <td>{$r['pais']}</td>
+                </tr>";
+        }
+        echo "</table>";
+    } else {
+        echo "<p>No hay álbumes registrados.</p>";
     }
-    echo "</table>";
-} else {
-    echo "<p>No hay álbumes registrados.</p>";
+} catch (PDOException $e) {
+    die("Conexión fallida: " . $e->getMessage());
 }
 ?>
 </body>

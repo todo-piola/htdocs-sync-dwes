@@ -22,7 +22,8 @@
 <p><a href="index.php">⬅ Volver</a></p>
 
 <?php
-if (isset($_POST['actualizar'])) {
+try {
+  if (isset($_POST['actualizar'])) {
     $id     = $_POST['id'];
     $titulo = $_POST['titulo'];
     $anio   = $_POST['anio'];
@@ -37,7 +38,11 @@ if (isset($_POST['actualizar'])) {
             WHERE id=$id";
     $conexion->exec($sql);
     echo "<p style='color:green;'>Álbum actualizado ✅</p>";
+  }
+} catch (PDOException $e) {
+  die("Conexión fallida: " . $e->getMessage());
 }
+
 ?>
 </body>
 </html>

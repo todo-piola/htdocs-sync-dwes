@@ -21,7 +21,9 @@
 <p><a href="index.php">⬅ Volver</a></p>
 
 <?php
-if (isset($_POST['insertar'])) {
+
+try {
+  if (isset($_POST['insertar'])) {
     $titulo = $_POST['titulo'];
     $anio   = $_POST['anio'];
     $sello  = $_POST['sello'];
@@ -31,7 +33,11 @@ if (isset($_POST['insertar'])) {
             VALUES ('$titulo', $anio, '$sello', '$pais')";
     $conexion->exec($sql);
     echo "<p style='color:green;'>Álbum insertado correctamente ✅</p>";
+  }
+} catch (PDOException $e) {
+  die("Conexión fallida: " . $e->getMessage());
 }
+
 ?>
 </body>
 </html>
