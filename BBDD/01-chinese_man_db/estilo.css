@@ -34,7 +34,7 @@ p {
   flex-wrap: wrap;
 }
 
-/* ====== Botones grandes estilo “Chinese Man” ====== */
+/* ====== Botones grandes ====== */
 button {
   background: linear-gradient(145deg, #e63946, #9c1c28);
   color: #fff;
@@ -60,7 +60,7 @@ button:hover {
               inset 0 3px 10px rgba(255, 255, 255, 0.4);
 }
 
-/* ====== Detalle visual sutil ====== */
+/* ====== Detalle nota música ====== */
 body::after {
   content: "♬";
   position: fixed;

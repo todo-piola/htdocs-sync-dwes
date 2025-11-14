@@ -31,7 +31,7 @@ try {
     echo "🗑️ Base de datos anterior eliminada correctamente.<br>";
 
     // Crear base de datos nueva
-    $conexion->exec("CREATE DATABASE chinese_man_db CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci");
+    $conexion->exec("CREATE DATABASE IF NOT EXISTS chinese_man_db CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci");
     echo "✅ Base de datos 'chinese_man_db' creada correctamente.<br>";
 
     // Conectar ahora a la base de datos recién creada
