@@ -13,13 +13,13 @@
 <p><a href="index.php">⬅ Volver</a></p>
 
 <?php
-$stmt = $conexion->query("SELECT * FROM albumes ORDER BY id DESC");
-$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$consulta = $conexion->query("SELECT * FROM albumes ORDER BY id DESC");
+$filas = $consulta->fetchAll(PDO::FETCH_ASSOC);
 
-if ($rows) {
+if ($filas) {
     echo "<table border='1' cellpadding='6' style='margin:auto;'>
             <tr><th>ID</th><th>Título</th><th>Año</th><th>Sello</th><th>País</th></tr>";
-    foreach ($rows as $r) {
+    foreach ($filas as $r) {
         echo "<tr>
                 <td>{$r['id']}</td>
                 <td>{$r['titulo']}</td>
