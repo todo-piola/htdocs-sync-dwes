@@ -12,7 +12,7 @@
   </style>
 </head>
 <body>
-  <p><a href="index.php">⬅ Volver</a></p>
+  <p><a href="index.php"> << Volver</a></p>
 </body>
 </html>
 
@@ -42,9 +42,9 @@ try {
     $sql = "CREATE TABLE albumes (
         id INT AUTO_INCREMENT PRIMARY KEY,
         titulo VARCHAR(100) NOT NULL,
-        anio INT NOT NULL,
+        anio INT,
         sello VARCHAR(100),
-        pais VARCHAR(50) DEFAULT 'Francia'
+        pais VARCHAR(50)
     )";
 
     $conexion->exec($sql);
