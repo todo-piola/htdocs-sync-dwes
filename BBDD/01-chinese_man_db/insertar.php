@@ -17,9 +17,7 @@
   País:<br><input type="text" name="pais" value="Francia"><br><br>
   <button type="submit" name="insertar">Insertar</button>
 </form>
-
 <p><a href="index.php">⬅ Volver</a></p>
-
 <?php
 
 try {
@@ -32,7 +30,7 @@ try {
     $sql = "INSERT INTO albumes (titulo, anio, sello, pais) 
             VALUES ('$titulo', $anio, '$sello', '$pais')";
     $conexion->exec($sql);
-    echo "<p style='color:green;'>Álbum insertado correctamente ✅</p>";
+    echo "<p style='color:green;'>Álbum insertado correctamente </p>";
   }
 } catch (PDOException $e) {
   die("Conexión fallida: " . $e->getMessage());

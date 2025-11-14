@@ -28,11 +28,11 @@ try {
 
     // Borrar base de datos si existe
     $conexion->exec("DROP DATABASE IF EXISTS chinese_man_db");
-    echo "🗑️ Base de datos anterior eliminada correctamente.<br>";
+    echo " Base de datos anterior eliminada correctamente.<br>";
 
     // Crear base de datos nueva
     $conexion->exec("CREATE DATABASE IF NOT EXISTS chinese_man_db CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci");
-    echo "✅ Base de datos 'chinese_man_db' creada correctamente.<br>";
+    echo " Base de datos 'chinese_man_db' creada correctamente.<br>";
 
     // Conectar ahora a la base de datos recién creada
     $conexion = new PDO("mysql:host=$server;dbname=chinese_man_db;charset=utf8", $user, $password);
@@ -48,9 +48,9 @@ try {
     )";
 
     $conexion->exec($sql);
-    echo "🎵 Tabla 'albumes' creada correctamente.<br>";
+    echo " Tabla 'albumes' creada correctamente.<br>";
 
 } catch (PDOException $e) {
-    die("❌ Error: " . $e->getMessage());
+    die(" Error: " . $e->getMessage());
 }
 ?>

@@ -51,7 +51,7 @@ button {
   min-width: 200px;
 }
 
-/* ====== Efecto hover: más profundidad y brillo ====== */
+/* ====== Efecto hover ====== */
 button:hover {
   background: linear-gradient(145deg, #ffb703, #e63946);
   color: #111;
@@ -59,22 +59,3 @@ button:hover {
   box-shadow: 0 10px 25px rgba(255, 183, 3, 0.6),
               inset 0 3px 10px rgba(255, 255, 255, 0.4);
 }
-
-/* ====== Detalle nota música ====== */
-body::after {
-  content: "♬";
-  position: fixed;
-  bottom: 20px;
-  right: 30px;
-  font-size: 2.5em;
-  color: #e63946;
-  opacity: 0.6;
-  animation: beat 2s infinite;
-}
-
-/* ====== Animación del icono ====== */
-@keyframes beat {
-  0%, 100% { transform: scale(1); opacity: 0.6; }
-  50% { transform: scale(1.2); opacity: 1; }
-}
-

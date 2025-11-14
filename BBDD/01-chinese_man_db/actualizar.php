@@ -37,7 +37,7 @@ try {
               pais='$pais'
             WHERE id=$id";
     $conexion->exec($sql);
-    echo "<p style='color:green;'>Álbum actualizado ✅</p>";
+    echo "<p style='color:green;'>Álbum actualizado </p>";
   }
 } catch (PDOException $e) {
   die("Conexión fallida: " . $e->getMessage());

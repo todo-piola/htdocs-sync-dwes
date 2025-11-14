@@ -24,7 +24,7 @@ try{
     $id = $_POST['id'];
     $sql = "DELETE FROM albumes WHERE id=$id";
     $conexion->exec($sql);
-    echo "<p style='color:green;'>Álbum borrado ✅</p>";
+    echo "<p style='color:green;'>Álbum borrado </p>";
   }
 } catch (PDOException $e) {
   die("Conexión fallida: " . $e->getMessage());
