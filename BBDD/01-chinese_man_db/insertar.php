@@ -31,7 +31,8 @@ try {
 
     // Recuperamos los valores enviados desde el formulario.
     $titulo = $_POST['titulo'];
-    $anio   = $_POST['anio'];
+    $anio = $_POST["anio"];
+    $anio = $anio === "" ? "NULL" : intval($anio);
     $sello  = $_POST['sello'];
     $pais   = $_POST['pais'];
 
