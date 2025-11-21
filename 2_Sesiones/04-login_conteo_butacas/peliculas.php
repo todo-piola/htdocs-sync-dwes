@@ -7,6 +7,7 @@ if (!isset($_SESSION['usuario'])) {
     exit;
 }
 
+
 $aforo_total = 10; // Máximo de sillas por película
 $mensaje = "";
 
