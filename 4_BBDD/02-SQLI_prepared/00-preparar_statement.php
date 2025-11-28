@@ -28,7 +28,7 @@
         $stmt->bind_param("is", $id, $label);
         $stmt->execute();
     }
-    echo "Datos insertados correctamente.";
+    echo "Datos insertados correctamente. <br>";
 
     $stmt = $mysqli->prepare("DELETE FROM test WHERE label = ?");
     $label = "C++";
