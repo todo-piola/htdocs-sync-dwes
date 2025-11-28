@@ -1,6 +1,6 @@
 <?php 
-  // Incluimos el archivo que contiene la conexión a la base de datos.
-  include 'conexion.php'; 
+// Incluimos el archivo que contiene la conexión a la base de datos.
+include 'conexion.php'; 
 ?>
 
 
@@ -23,33 +23,18 @@
 
 <?php
 
-try {
 
-  // Comprobamos si el formulario ha enviado el botón 'borrar'.
-  // Esto significa que el usuario ha solicitado eliminar un registro
   if (isset($_POST['borrar'])) {
-
-    // Recuperamos el ID del registro que se desea borrar.
-    // Este valor proviene del formulario (input name="id").
-    $id = $_POST['id'];
+    $id = $_POST['id']; // Recuperamos el ID del registro que se desea borrar, registro que proviene del formulario.
 
     // Consulta SQL que elimina el álbum cuyo ID coincide con el indicado.
-    // DELETE elimina la fila completa de la tabla .
-    $sql = "DELETE FROM albumes WHERE id=$id";
-
-    // Ejecutamos la consulta en la base de datos.
-    $conexion->exec($sql);
+    $stmt = $sqli->prepare("DELETE FROM albumes WHERE id = ?");
+    $stmt->bind_param("i", $id);
+    $stmt->execute();
 
     // Mensaje informativo para el usuario.
     echo "<p style='color:green;'>Álbum borrado </p>";
   }
-
-} catch (PDOException $e) {
-
-  // Si ocurre un error con la base de datos (por ejemplo, conexión fallida),
-  // el script se detiene y muestra el mensaje del error.
-  die("Conexión fallida: " . $e->getMessage());
-}
 
 ?>
 

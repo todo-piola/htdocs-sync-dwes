@@ -1,5 +1,8 @@
-<!-- Incluimos el archivo con la conexión a la base de datos -->
-<?php include 'conexion.php'; ?>
+
+<?php 
+// Incluimos el archivo que contiene la conexión a la base de datos.
+include 'conexion.php'; 
+?>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -24,11 +27,7 @@
 
 <?php
 
-try {
-  // Comprobamos si el usuario ha pulsado el botón "Insertar".
-  // Si existe $_POST['insertar'], significa que el formulario se ha enviado.
-  if (isset($_POST['insertar'])) {
-
+  if (isset($_POST['insertar'])) { 
     // Recuperamos los valores enviados desde el formulario.
     $titulo = $_POST['titulo'];
     $anio = $_POST["anio"];
@@ -38,19 +37,13 @@ try {
 
     // Consulta SQL que inserta los datos en la tabla 'albumes'.
     // Se insertan los valores recogidos del formulario.
-    $sql = "INSERT INTO albumes (titulo, anio, sello, pais) 
-            VALUES ('$titulo', $anio, '$sello', '$pais')";
-
-    // Ejecutamos la sentencia INSERT en la base de datos.
-    $conexion->exec($sql);
+    $stmt = $sqli->prepare("INSERT INTO albumes (titulo, anio, sello, pais) 
+            VALUES ('$titulo', $anio, '$sello', '$pais')");
+    $stmt->bind_param("siss", $titulo, $anio, $sello, $pais);
+    $stmt->execute();
 
     // Mensaje de confirmación al usuario.
     echo "<p style='color:green;'>Álbum insertado correctamente </p>";
-  }
-
-} catch (PDOException $e) {
-  // Si ocurre algún error (de conexión o SQL), se detiene el script y se muestra el mensaje del error.
-  die("Conexión fallida: " . $e->getMessage());
 }
 
 ?>
