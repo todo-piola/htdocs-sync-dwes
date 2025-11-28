@@ -2,6 +2,12 @@
     mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
     $mysqli = new mysqli("localhost", "root", "", "facultad");
 
+    // Comprobación de conexión
+    if ($mysqli->connect_errno) {
+        echo "Error de conexión: " . $mysqli->connect_error;
+        exit;
+    }
+
     // Consulta no preparada
     $mysqli->query("DROP TABLE IF EXISTS test");
 
@@ -24,11 +30,11 @@
     }
     echo "Datos insertados correctamente.";
 
-    $stmt = mysqli->prepare("DELETE FROM test WHERE id = ?");
-    $id = 1;
-    $stmt->bind_param("i", $id);
+    $stmt = $mysqli->prepare("DELETE FROM test WHERE label = ?");
+    $label = "C++";
+    $stmt->bind_param("s", $label);
     $stmt->execute();
-    echo "Registro eliminado correctamente.";
+    echo "Registro " . $label .  " eliminado correctamente.";
 
     // Cerrar la conexión
     $mysqli->close();
