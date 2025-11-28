@@ -10,9 +10,6 @@ if (!isset($_SESSION['usuario'])) {
     exit;
 }  
 
-if (empty($conexion_pdo)) {
-    die("Error: no hay conexión a la base de datos. Revisa conexion.php");
-}
 
 $mensaje = "";
 
